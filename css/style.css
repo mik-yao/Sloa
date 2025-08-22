@@ -154,27 +154,19 @@ span {
 /* banner */
 
 #banner_wrap {
-    width: 100%;
-    /* 화면 폭에 맞게 늘리기 */
-    max-width: 1920px;
-    /* PC에서는 1920px 이상 안 늘어나게 */
-    height: 800px;
-    /* 원하는 고정 높이 */
-    margin: 0 auto;
-    /* 중앙 정렬 */
+    position: relative;
+    width: 100%;      /* 화면 폭에 맞게 늘리기 */
+    max-width: 1920px;/* PC에서는 1920px 이상 안 늘어나게 */
+    height: 800px;    /* 원하는 고정 높이 */
+    margin: 0 auto;   /* 중앙 정렬 */
+    overflow: hidden; /* 넘치는 부분 안 보이게 */
 }
 
-#banner_Wrap video {
-    display: block;
-    /* inline → block */
+#banner_wrap video {
     width: 100%;
-    /* 부모 기준으로 꽉 차게 */
     height: 100%;
-    object-fit: cover;
-    /* 비율 유지하며 꽉 채우기 */
-    object-position: center;
-    margin: 0 auto;
-    /* 혹시 block인데 남는 공간 있을 때 가운데 정렬 */
+    object-fit: cover; /* 꽉 차게, 비율 유지 */
+    object-position: center; /* 가운데 기준 */
 }
 
 
