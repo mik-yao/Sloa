@@ -177,6 +177,7 @@ span {
     /* 혹시 block인데 남는 공간 있을 때 가운데 정렬 */
 }
 
+
 /* about */
 
 
@@ -1039,5 +1040,4 @@ span {
 
 .mySwiper2 .swiper-slide .overlay p {
     font-size: 18px;
-
 }
