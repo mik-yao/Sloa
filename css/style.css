@@ -101,11 +101,13 @@ span {
 }
 
 #gnb_wrap {
-    width: 1320px;
+    width: 100%;
+    max-width: 1320px;
     height: 80px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
 }
 
@@ -135,7 +137,7 @@ span {
 .icon01 {
     width: 22px;
     height: 22px;
-    padding-top: 5px;
+    margin-top: 5px;
 }
 
 .sub_gnb {
@@ -146,9 +148,9 @@ span {
 }
 
 .sub_gnb>li>a {
-    margin-top: 12px;
+    margin-top: 3px;
     display: block;
-    padding: 15px 20px;
+    padding: 10px 10px;
 }
 
 /* banner */
@@ -209,27 +211,31 @@ span {
     background: url(../img/sub_banner_01.png) no-repeat center;
 }
 
-#sub_bn_wrap {
+#sub_line_box {
     width: 1320px;
     height: 460px;
     margin: 0 auto;
+    box-sizing: border-box; 
+}
+
+#sub_bn_wrap {
+    width: 600px;
+    height: 460px;
+    float: right;
     box-sizing: border-box;
-    position: relative;
 }
 
 .sub_bn_text {
     color: #fff;
     font-family: 'Pretendard';
     font-size: 30px;
-    position: absolute;
-    top: 132px;
-    right: 246px;
+    padding-top: 132px;
+    padding-bottom: 15px;
 }
 
 .text_02 {
     color: #fff;
     line-height: 28px;
-    position: absolute;
     top: 184px;
     right: 60px;
 }
