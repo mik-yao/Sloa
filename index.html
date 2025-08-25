@@ -18,6 +18,26 @@
 
 <body>
     <div id="wrap">
+        <!-- 챗봇 아이콘 버튼 -->
+        <div id="chatbotToggle" onclick="toggleChatbot()">
+            <img src="./img/chatbot.png" alt="chatbot_icon" id="chatbotIcon">
+        </div>
+
+        <!-- 챗봇 패널 -->
+        <div class="chatbot-panel" id="chatbotPanel">
+            <button class="chat-close" onclick="toggleChatbot()">✕</button>
+
+            <h3>Sloa Quick Menu</h3>
+            <p>바로가기 메뉴를 선택하세요.</p>
+
+            <a href="#event_wrap" class="chat-option">Sloa 구독 하러가기 <span>›</span></a>
+            <a href="#Beans_bn" class="chat-option">Sloa 원두 구매하러 가기 <span>›</span></a>
+            <a href="#section03" class="chat-option">Sloa 매거진 읽으러 가기 <span>›</span></a>
+            <a href="#qna_wrap" class="chat-option">Sloa 에게 궁금한 거 물어보기 <span>›</span></a>
+        </div>
+
+
+
         <!-- TOP -->
         <div id="TOP_wrap">
 
@@ -37,7 +57,7 @@
 
                 <ul class="sub_gnb">
 
-                    <li><a href="javascript:return false;">KR</a></li>
+                    <li class="lage"><a href="javascript:return false;">KR</a></li>
                     <li class="icon01"><a href="javascript:return false;"><img src="./img/search.png" alt="search"></a>
                     </li>
 
@@ -52,7 +72,7 @@
         <div id="banner_wrap">
 
             <div class="video_box">
-                
+
                 <video src="./video/bn_video.mp4" autoplay loop muted></video>
 
             </div>
@@ -93,20 +113,20 @@
 
             <div id="sub_line_box">
 
-            <div id="sub_bn_wrap">
+                <div id="sub_bn_wrap">
 
-                <h4 class="sub_bn_text">Services provided by Sloa</h4>
+                    <h4 class="sub_bn_text">Services provided by Sloa</h4>
 
-                <p class="text_02">Sloa는 커피 정기 구독 서비스를 통해 사용자가 자신의 일상에 여유를 더할 수
-                    <br>있도록 돕습니다.각 시즌마다 선정된 원두와 함께 계절의 무드를 담은 브랜드 굿즈와
-                    <br>독립출판물을 패키지로 구성하여 제공하며, 커피 한 잔과 함께 나만의 시간을 즐길
-                    <br>수 있도록 감각적인 경험을 큐레이션과 단순한 소비가 아닌, 삶의 리듬을 되찾는
-                    <br>경험을 서비스의 중심에 두고 있습니다.
-                </p>
+                    <p class="text_02">Sloa는 커피 정기 구독 서비스를 통해 사용자가 자신의 일상에 여유를 더할 수
+                        <br>있도록 돕습니다.각 시즌마다 선정된 원두와 함께 계절의 무드를 담은 브랜드 굿즈와
+                        <br>독립출판물을 패키지로 구성하여 제공하며, 커피 한 잔과 함께 나만의 시간을 즐길
+                        <br>수 있도록 감각적인 경험을 큐레이션과 단순한 소비가 아닌, 삶의 리듬을 되찾는
+                        <br>경험을 서비스의 중심에 두고 있습니다.
+                    </p>
+
+                </div>
 
             </div>
-        
-        </div>
 
         </div>
 
@@ -652,8 +672,6 @@
 
 
 
-
-
     </div>
 
 
@@ -710,6 +728,23 @@
 
     <script>
         AOS.init();
+    </script>
+
+    <!-- chatbot -->
+
+    <script>
+        function toggleChatbot() {
+            const panel = document.getElementById("chatbotPanel");
+            const icon = document.getElementById("chatbotIcon");
+
+            if (panel.style.display === "flex") {
+                panel.style.display = "none";
+                icon.src = "./img/chatbot.png"; // 닫혔을 때 기본 아이콘
+            } else {
+                panel.style.display = "flex";
+                icon.src = "./img/chatbot2.png"; // 열렸을 때 흰색 아이콘
+            }
+        }
     </script>
 
 </body>

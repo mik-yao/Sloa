@@ -18,6 +18,10 @@ body {
     font-weight: 300;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 
 #wrap {
@@ -101,8 +105,7 @@ span {
 }
 
 #gnb_wrap {
-    width: 100%;
-    max-width: 1320px;
+    width: 1320px;
     height: 80px;
     margin: 0 auto;
     display: flex;
@@ -111,10 +114,10 @@ span {
     box-sizing: border-box;
 }
 
-.logo {
-    width: 119px;
-    height: 60px;
-    margin-top: 10px;
+.logo img {
+    width: 105px;
+    height: 53px;
+    margin-top: 5px;
 }
 
 .gnb {
@@ -149,8 +152,14 @@ span {
 
 .sub_gnb>li>a {
     margin-top: 3px;
-    display: block;
-    padding: 10px 10px;
+    display: inline-block;
+    padding: 15px 15px;
+}
+
+.sub_gnb>li>a img {
+    width: 20px;
+    height: 20px;
+    padding: 2px 5px;
 }
 
 /* banner */
@@ -158,14 +167,16 @@ span {
 #banner_wrap {
     position: relative;
     height: 800px;
-    margin: 0 auto;   
+    margin: 0 auto;
     text-align: center;
 }
 
 #banner_wrap video {
     height: 100%;
-    object-fit: cover; /* 꽉 차게, 비율 유지 */
-    object-position: center; /* 가운데 기준 */
+    object-fit: cover;
+    /* 꽉 차게, 비율 유지 */
+    object-position: center;
+    /* 가운데 기준 */
     position: absolute;
     top: 0;
     left: 50%;
@@ -215,7 +226,7 @@ span {
     width: 1320px;
     height: 460px;
     margin: 0 auto;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 #sub_bn_wrap {
@@ -785,6 +796,90 @@ span {
     margin-bottom: 15px;
 }
 
+/* chatbot */
+
+/* 챗봇 토글 버튼 */
+#chatbotToggle {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+  border-radius: 50px;
+}
+
+#chatbotToggle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 패널 */
+.chatbot-panel {
+  position: fixed;
+  bottom: 120px;
+  right: 50px;
+  width: 280px;
+  background: rgba(30,30,30,0.95);
+  color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 5 5px 25px rgba(0,0,0,0.4);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chatbot-panel h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.chatbot-panel p {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+
+/* 메뉴 */
+.chat-option {
+  background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  border-radius: 12px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.chat-option:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* 닫기 버튼 (X) */
+.chat-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
 
 
 
@@ -913,6 +1008,56 @@ span {
 }
 
 
+.sub_gnb>li>a:hover {
+    color: #193441;
+}
+
+.sub_gnb>li>a:hover img {
+    transform: rotate(0deg);
+    animation: rotate 0.5s ease-in-out;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.view_more:hover img {
+    transform: translateX(-10px);
+    transition: transform 0.3s ease;
+    animation: keepRight 0.3s ease-in-out;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+.view_more2:hover img {
+    transform: translateX(-10px);
+    transition: transform 0.3s ease;
+    animation: keepRight 0.3s ease-in-out;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+}
 
 
 /* 폰트 모아둔 곳 */
