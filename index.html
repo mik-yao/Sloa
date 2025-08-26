@@ -47,17 +47,17 @@
 
                 <ul class="gnb">
 
-                    <li><a href="javascript:return false;">About</a></li>
-                    <li><a href="javascript:return false;">Service</a></li>
-                    <li><a href="javascript:return false;">Branded items</a></li>
-                    <li><a href="javascript:return false;">Magazine</a></li>
-                    <li><a href="javascript:return false;">QnA</a></li>
+                    <li><a href="#about_wrap">About</a></li>
+                    <li><a href="#sub_bn">Service</a></li>
+                    <li><a href="#Beans_bn">Branded items</a></li>
+                    <li><a href="#section03">Magazine</a></li>
+                    <li><a href="#qna_wrap">QnA</a></li>
 
                 </ul>
 
                 <ul class="sub_gnb">
 
-                    <li class="lage"><a href="javascript:return false;">KR</a></li>
+                    <li class="lage"><a href="javascript:return false;" id="langToggle">KR</a></li>
                     <li class="icon01"><a href="javascript:return false;"><img src="./img/search.png" alt="search"></a>
                     </li>
 
@@ -746,6 +746,14 @@
             }
         }
     </script>
+
+    <!-- kr -->
+
+    <script>
+  document.getElementById("langToggle").addEventListener("click", function () {
+    this.textContent = this.textContent === "KR" ? "EN" : "KR";
+  });
+</script>
 
 </body>
 

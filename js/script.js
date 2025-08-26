@@ -1,3 +1,6 @@
+
+// qna
+
 $(function(){
 	$(".qna_box> ul> li").click(function(){
 		$(this).children(".qna_info").slideToggle();

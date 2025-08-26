@@ -800,84 +800,91 @@ span {
 
 /* 챗봇 토글 버튼 */
 #chatbotToggle {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  width: 55px;
-  height: 55px;
-  cursor: pointer;
-  z-index: 1000;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-  border-radius: 50px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
 }
 
 #chatbotToggle img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* 패널 */
 .chatbot-panel {
-  position: fixed;
-  bottom: 120px;
-  right: 50px;
-  width: 280px;
-  background: rgba(30,30,30,0.95);
-  color: #fff;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 5 5px 25px rgba(0,0,0,0.4);
-  display: none;
-  flex-direction: column;
-  z-index: 1000;
-  animation: fadeInUp 0.5s ease;
+    position: fixed;
+    bottom: 120px;
+    right: 50px;
+    width: 280px;
+    background: rgba(30, 30, 30, 0.95);
+    color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 5 5px 25px rgba(0, 0, 0, 0.4);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    animation: fadeInUp 0.5s ease;
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .chatbot-panel h3 {
-  margin: 0 0 5px;
-  font-size: 18px;
+    margin: 0 0 5px;
+    font-size: 18px;
 }
 
 .chatbot-panel p {
-  font-size: 13px;
-  opacity: 0.7;
-  margin-bottom: 15px;
+    font-size: 13px;
+    opacity: 0.7;
+    margin-bottom: 15px;
 }
 
 /* 메뉴 */
 .chat-option {
-  background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-  border-radius: 12px;
-  padding: 12px 15px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background 0.2s ease;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border-radius: 12px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
 }
 
 .chat-option:hover {
-  background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* 닫기 버튼 (X) */
 .chat-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: transparent;
-  border: none;
-  font-size: 20px;
-  color: #fff;
-  cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
 }
 
 
