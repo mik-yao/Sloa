@@ -1,22 +1,22 @@
 
 // qna
 
-$(function(){
-	$(".qna_box> ul> li").click(function(){
-		$(this).children(".qna_info").slideToggle();
-		$(this).siblings().children(".qna_info").slideUp();
-	});
+$(function () {
+  $(".qna_box> ul> li").click(function () {
+    $(this).children(".qna_info").slideToggle();
+    $(this).siblings().children(".qna_info").slideUp();
+  });
 });
-$(function(){
-	$(".qna_box> ul> li").click(function(){
-		$(this).toggleClass("turn");
-		
-		if($(this).hasClass("turn")===true){
-				$(this).siblings().removeClass("turn");
-			
-		}
+$(function () {
+  $(".qna_box> ul> li").click(function () {
+    $(this).toggleClass("turn");
 
-	});
+    if ($(this).hasClass("turn") === true) {
+      $(this).siblings().removeClass("turn");
+
+    }
+
+  });
 });
 
 
@@ -50,3 +50,22 @@ document.fonts.ready.then(() => {
     split.timeScale(0.2).play(0);
   });
 });
+
+
+// 모달 핍업
+
+function openModal() {
+  document.getElementById("figmaModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("figmaModal").style.display = "none";
+}
+
+// 모달 영역 바깥 클릭 시 닫힘
+window.onclick = function (event) {
+  let modal = document.getElementById("figmaModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

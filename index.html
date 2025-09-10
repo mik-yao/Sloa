@@ -621,13 +621,28 @@
                     <br>Sloa의 모든 경험을 모바일 앱으로 간편하게 즐겨보세요.
                 </p>
 
-                <a class="google" href="javascript:return false;"><img src="./img/google Play.png" alt="google"></a>
-                <a class="appstore" href="javascript:return false;"><img src="./img/app store.png" alt="app_store"></a>
+                <a class="google" href="javascript:void(0);"><img src="./img/google Play.png" onclick="openModal()"
+                        alt="google"></a>
+                <a class="appstore" href="javascript:void(0);"><img src="./img/app store.png" onclick="openModal()"
+                        alt="app_store"></a>
 
             </div>
 
         </div>
 
+    </div>
+
+    <!-- 모달 영역 -->
+    <div id="figmaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <!-- Figma embed iframe -->
+            <iframe style="border: 0.5px solid rgba(0, 0, 0, 0.1);" width="800" height="650"
+                src="https://embed.figma.com/proto/E0FS8BC4Kuzyq6a2v6Mh16/sloa-sub?page-id=0%3A1&node-id=124-431&p=f&viewport=1207%2C-600%2C0.48&scaling=scale-down&content-scaling=fixed&starting-point-node-id=320%3A178&embed-host=share"
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
 
     <!-- footer -->
